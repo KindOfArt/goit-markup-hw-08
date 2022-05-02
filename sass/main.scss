@@ -376,6 +376,7 @@
     @media (min-width: 768px) and (max-width: 1199px) {
       flex-wrap: wrap;
       justify-content: space-around;
+      column-gap: 165px;
     }
     @media (min-width: 1200px) {
       text-align: left;
@@ -403,6 +404,10 @@
     font-weight: 900;
     font-size: 26px;
     line-height: calc(42 / 26);
+    @media (min-width: 1200px) {
+      font-size: 44px;
+      line-height: math.div(60, 44);
+    }
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
@@ -580,6 +585,7 @@
     background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
   }
 }
+
 .team {
   background-color: $secodaryBgColor;
 
@@ -591,6 +597,10 @@
     font-weight: 700;
     font-size: 28px;
     line-height: calc(33 / 28);
+    @media (min-width: 1200px) {
+      font-size: 36px;
+      line-height: math.div(42, 36);
+    }
 
     text-align: center;
 
@@ -735,6 +745,10 @@
     font-weight: 700;
     font-size: 28px;
     line-height: calc(33 / 28);
+    @media (min-width: 1200px) {
+      font-size: 36px;
+      line-height: math.div(42, 36);
+    }
 
     text-align: center;
 
@@ -1451,13 +1465,23 @@
 
   &__item {
     @media (min-width: 768px) {
+      display: flex;
       flex: 0 0 calc((100% - 30px) / 2);
+    }
+    @media (min-width: 1200px) {
+      flex: 0 0 calc((100% - 60px) / 3);
     }
   }
 
   // .card-set__card
 
   &__card {
+    display: flex;
+    flex: 0 1 auto;
+
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
   }
 }
 .card {
@@ -1465,6 +1489,7 @@
 
   &__link {
     display: block;
+
     transition: box-shadow $transitionTiming;
 
     &:hover,
@@ -1516,7 +1541,7 @@
     color: $basicWhite;
     background-color: rgba($color: $accentColor, $alpha: 0.9);
 
-    .card-set__item:hover & {
+    .card__link:hover & {
       transform: translateY(0);
       opacity: 1;
       visibility: visible;
@@ -1527,9 +1552,6 @@
 
   &__description {
     padding: 20px 24px;
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
     & > *:not(:last-child) {
       margin-bottom: 4px;
     }
