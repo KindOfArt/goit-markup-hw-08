@@ -1172,8 +1172,10 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.join-us {
-  margin-bottom: 60px;
+@media (max-width: 1199px) {
+  .join-us {
+    margin-bottom: 60px;
+  }
 }
 @media (min-width: 1200px) {
   .join-us {
@@ -1718,15 +1720,19 @@ p {
   }
 }
 .card-set__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+@media (min-width: 768px) {
+  .card-set__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
 }
 
 .card__link {

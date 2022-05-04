@@ -864,7 +864,9 @@
 }
 
 .join-us {
-  margin-bottom: 60px;
+  @media (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
   @media (min-width: 1200px) {
     flex: 1 0 auto;
   }
@@ -1476,8 +1478,10 @@
   // .card-set__card
 
   &__card {
-    display: flex;
-    flex: 0 1 auto;
+    @media (min-width: 768px) {
+      display: flex;
+      flex: 0 1 auto;
+    }
 
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
