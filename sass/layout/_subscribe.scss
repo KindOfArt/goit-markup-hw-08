@@ -1,0 +1,121 @@
+.subscribe {
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex: 1 1 auto;
+  }
+  @media (min-width: 1200px) {
+    flex: 2 0 auto;
+  }
+  // .subscribe__title
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: inherit;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $basicWhite;
+  }
+
+  // .subscribe__field
+
+  &__field {
+    @media (min-width: 1200px) {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  // .subscribe__thumb
+
+  &__thumb {
+    position: relative;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1200px) {
+      flex: 1 0 auto;
+    }
+  }
+
+  // .subscribe__input
+
+  &__input {
+    display: block;
+    height: 50px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+
+    color: $basicWhite;
+    background-color: transparent;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    &:focus {
+      box-shadow: 0 0 6px rgba($color: $accentColor, $alpha: 0.8);
+    }
+
+    @media (max-width: 1199px) {
+      width: 100%;
+    }
+    @media (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  // .subscribe__label
+
+  &__label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    .subscribe__input:focus + &,
+    .subscribe__input:not(:placeholder-shown) + & {
+      visibility: hidden;
+    }
+  }
+
+  // .subscribe__btn
+
+  &__btn {
+    @include modifierButton(16);
+
+    min-width: 200px;
+    min-height: 50px;
+    gap: 10px;
+  }
+
+  // .subscribe__btn-text
+
+  &__btn-text {
+  }
+
+  // .subscribe__btn-icon
+
+  &__btn-icon {
+    fill: $basicWhite;
+  }
+}

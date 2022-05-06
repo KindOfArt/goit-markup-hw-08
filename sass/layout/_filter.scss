@@ -1,0 +1,115 @@
+.filter {
+  // .filter__body
+
+  &__body {
+  }
+
+  // .filter__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 15px;
+    column-gap: 8px;
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  // .filter__item
+
+  &__item {
+    @media (min-width: 768px) {
+    }
+    // .filter__item--all
+
+    &--all {
+    }
+
+    // .filter__item--web-site
+
+    &--web-site {
+    }
+
+    // .filter__item--apps
+
+    &--apps {
+    }
+
+    // .filter__item--design
+
+    &--design {
+    }
+
+    // .filter__item--marketing
+
+    &--marketing {
+    }
+  }
+
+  // .filter__input
+
+  &__input {
+    // .filter__input--all
+
+    &--all {
+    }
+
+    // .filter__input--web-site
+
+    &--web-site {
+    }
+
+    // .filter__input--apps
+
+    &--apps {
+    }
+
+    // .filter__input--design
+
+    &--design {
+    }
+
+    // .filter__input--marketing
+
+    &--marketing {
+    }
+  }
+
+  // .filter__label
+
+  &__label {
+    @include modifierButton(16, 26, $mainTextColor, $secodaryBgColor);
+    padding: 6px 22px;
+    box-shadow: none;
+
+    .filter__input:checked + & {
+      @include modifierButton(16, 26, $basicWhite, $accentColor);
+    }
+    // .filter__label--all
+
+    &--all {
+    }
+
+    // .filter__label--web-site
+
+    &--web-site {
+    }
+
+    // .filter__label--apps
+
+    &--apps {
+    }
+
+    // .filter__label--design
+
+    &--design {
+    }
+
+    // .filter__label--marketing
+
+    &--marketing {
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.notification {
+  @media (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    flex: 1 0 auto;
+  }
+
+  // .notification__logo
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  // .notification__address
+
+  &__address {
+    font-style: normal;
+  }
+
+  // .notification__address-list
+
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (min-width: 1200px) {
+      gap: 9px;
+    }
+  }
+
+  // .notification__address-item
+
+  &__address-item {
+  }
+
+  // .notification__address-link
+
+  &__address-link {
+    color: $basicWhite;
+    // .notification__address-link--contacts
+
+    &--contacts {
+      transition: color $transitionTiming;
+      color: rgba(255, 255, 255, 0.6);
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
+  }
+}

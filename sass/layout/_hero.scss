@@ -1,0 +1,55 @@
+.hero {
+  max-width: 1600px;
+  padding: 118px 0;
+  margin: 0 auto;
+
+  text-align: center;
+
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  @media (max-width: 767px) {
+    background-image: url(../images/hero/mobile/hero.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero/mobile/hero@2x.jpg);
+    }
+  }
+  @media (min-width: 768px) {
+    background-image: url(../images/hero/tablet/hero.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero/tablet/hero@2x.jpg);
+    }
+  }
+  @media (min-width: 1200px) {
+    background-image: url(../images/hero/desktop/hero.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resilution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desktop/hero@2x.jpg);
+    }
+  }
+  background-position: center;
+  background-size: cover;
+
+  // .hero__title
+  &__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    @media (min-width: 1200px) {
+      font-size: 44px;
+      line-height: math.div(60, 44);
+    }
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $basicWhite;
+  }
+
+  // .hero__btn
+
+  &__btn {
+    @include modifierButton(16);
+
+    min-width: 200px;
+    min-height: 50px;
+  }
+}

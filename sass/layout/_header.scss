@@ -1,0 +1,296 @@
+.header {
+  // .header__logo
+  border-bottom: 1px solid #ececec;
+  &__logo {
+  }
+  // .header__menu
+  &__menu {
+    font-weight: 500;
+    line-height: math.div(16, 14);
+    letter-spacing: 0.02em;
+
+    @media (max-width: 767px) {
+      height: 100%;
+    }
+    @media (min-width: 1200px) {
+      flex: 1 0 auto;
+    }
+  }
+  // .header__menu-icon
+  &__menu-icon {
+    display: none;
+    @media (max-width: 767px) {
+      position: relative;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+      display: block;
+      z-index: 6;
+
+      & > span,
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        height: 10%;
+        width: 100%;
+        transition: all $transitionTiming;
+        background-color: $basicBlack;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      & > span {
+        top: 50%;
+        transform: scale(1) translateY(-50%);
+      }
+      &.is-open span {
+        transform: scale(0) translateY(-50%);
+      }
+      &.is-open::before {
+        top: 50%;
+        transform: rotate(-45deg) translateY(-50%);
+      }
+      &.is-open::after {
+        bottom: 50%;
+        transform: rotate(45deg) translateY(50%);
+      }
+
+      &:hover span,
+      &:hover::before,
+      &:hover::after {
+        background-color: $accentColor;
+      }
+      &.is-open:hover span,
+      &.is-open:hover::before,
+      &.is-open:hover::after {
+        background-color: $accentColor;
+      }
+    }
+  }
+  // .header__menu-body
+  &__menu-body {
+    display: flex;
+    @media (max-width: 767px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      padding: 40px;
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: $basicWhite;
+      overflow: auto;
+
+      transition: transform $transitionTiming;
+
+      z-index: 5;
+      &.is-open {
+        transform: translateX(0);
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      align-items: center;
+      gap: 84px;
+    }
+    @media (min-width: 1200px) {
+      align-items: center;
+    }
+  }
+  // .header__nav
+  &__nav {
+    @media (max-width: 767px) {
+      flex: 1 1 auto;
+    }
+  }
+  // .header__nav__list
+  &__nav-list {
+    display: flex;
+    @media (max-width: 767px) {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+  // .header__nav-item
+  &__nav-item {
+    @media (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  // .header__nav-link
+  &__nav-link {
+    position: relative;
+
+    color: $mainTextColor;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+    @media (max-width: 767px) {
+      font-size: 40px;
+      line-height: calc(47 / 40);
+    }
+    @media (min-width: 768px) {
+      &.header__nav-link--current {
+        color: $accentColor;
+      }
+    }
+    @media (min-width: 1200px) {
+      padding: 8px 0;
+    }
+    //   .header__nav-link--current
+    &--current {
+      .header__menu-body.is-open & {
+        color: $accentColor;
+      }
+      @media (min-width: 768px) {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -32px;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 4px;
+          border-radius: 2px;
+
+          pointer-events: none;
+
+          background-color: $accentColor;
+          @media (min-width: 1200px) {
+            bottom: -24px;
+          }
+        }
+      }
+    }
+  }
+  // .header__contacts
+  &__contacts {
+    @media (min-width: 1200px) {
+      margin-left: auto;
+    }
+  }
+  // .header__contacts-list
+  &__contacts-list {
+    display: inline-flex;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      flex-direction: column-reverse;
+      row-gap: 10px;
+    }
+    @media (min-width: 1200px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      column-gap: 30px;
+    }
+  }
+  // .header__contacts-item
+  &__contacts-item {
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+  // .header__contacts-link
+  &__contacts-link {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    transition: color $transitionTiming;
+
+    color: $secondaryTextColor;
+
+    @media (min-width: 768px) {
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &--phone {
+        font-size: 34px;
+        line-height: calc(40 / 34);
+
+        color: $accentColor;
+      }
+      &--mail {
+        font-size: 24px;
+        line-height: calc(28 / 24);
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: math.div(14, 12);
+    }
+    @media (min-width: 1200px) {
+      padding: 8px 0;
+    }
+    // .header__contacts-link--phone
+    &--phone {
+    }
+    // .header__contacts-link--mail
+    &--mail {
+    }
+  }
+
+  // .header__contacts-icon
+  &__contacts-icon {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      fill: currentColor;
+    }
+  }
+  // .header__social-links
+  &__social-links {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+  // .header__social-links-list
+  &__social-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  // .header__social-links-item
+  &__social-links-item {
+    flex: 0 1 auto;
+
+    border-right: 1px solid rgba($color: $accentColor, $alpha: 0.2);
+    padding-right: 10px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  // .header__social-links-link
+  &__social-links-link {
+    display: block;
+    font-size: 16px;
+    line-height: calc(22 / 18);
+
+    color: $accentColor;
+  }
+}

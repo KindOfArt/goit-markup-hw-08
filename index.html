@@ -184,19 +184,48 @@
           <ul class="activity__list list">
             <li class="activity__item">
               <div class="activity__thumb">
-                <img src="./images/box-1.jpg" alt="" />
+                <!-- <img
+                  srcset="
+                    ./images/activity/desktop/img.jpg    1x,
+                    ./images/activity/desktop/img@2x.jpg 2x
+                  "
+                  src="./images/activity/desktop/img.jpg"
+                  sizes="33vw"
+                  alt="Десктопные приложения" /> -->
+                <img
+                  src="./images/activity/desktop/img.jpg"
+                  alt="Десктопные приложения"
+                  sizes="370px"
+                  srcset="
+                    ./images/activity/desktop/img.jpg    370w,
+                    ./images/activity/desktop/img@2x.jpg 740w
+                  " />
                 <p class="activity__description">Десктопные приложения</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__thumb">
-                <img src="./images/box-2.jpg" alt="" />
+                <img
+                  src="./images/activity/desktop/img-1.jpg"
+                  alt="Мобильные приложения"
+                  sizes="370px"
+                  srcset="
+                    ./images/activity/desktop/img-1.jpg    370w,
+                    ./images/activity/desktop/img@2x-1.jpg 740w
+                  " />
                 <p class="activity__description">Мобильные приложения</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__thumb">
-                <img src="./images/box-3.jpg" alt="" />
+                <img
+                  src="./images/activity/desktop/img-2.jpg"
+                  alt="Дизайнерские решения"
+                  sizes="370px"
+                  srcset="
+                    ./images/activity/desktop/img-2.jpg    370w,
+                    ./images/activity/desktop/img@2x-2.jpg 740w
+                  " />
                 <p class="activity__description">Дизайнерские решения</p>
               </div>
             </li>
@@ -208,7 +237,44 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img class="team__persone-photo" src="./images/product-designer-photo.jpg" alt="" />
+              <!-- <img class="team__persone-photo" src="./images/product-designer-photo.jpg" alt="" /> -->
+              <!-- <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/persone-1/mobile/img.jpg    1x,
+                    ./images/team/persone-1/mobile/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./images/team/persone-1/tablet/img.jpg    1x,
+                    ./images/team/persone-1/tablet/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/persone-1/desktop/img.jpg    1x,
+                    ./images/team/persone-1/desktop/img@2x.jpg 2x
+                  " />
+                <img
+                  class="team__persone-photo"
+                  src="./images/team/persone-1/mobile/img.jpg"
+                  alt="Игорь Демьяненко" />
+              </picture> -->
+              <img
+                class="team__persone-photo"
+                srcset="
+                  ./images/team/persone-1/mobile/img.jpg     450w,
+                  ./images/team/persone-1/mobile/img@2x.jpg  900w,
+                  ./images/team/persone-1/tablet/img.jpg     354w,
+                  ./images/team/persone-1/tablet/img@2x.jpg  708w,
+                  ./images/team/persone-1/desktop/img.jpg    270w,
+                  ./images/team/persone-1/desktop/img@2x.jpg 540w
+                "
+                src="./images/team/persone-1/mobile/img.jpg"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                alt="" />
               <div class="team__thumb">
                 <h3 class="team__person-name">Игорь Демьяненко</h3>
                 <p class="team__persone-position">Product Designer</p>
@@ -263,7 +329,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__persone-photo" src="./images/frontend-developer-photo.jpg" alt="" />
+              <!-- <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/persone-2/mobile/img.jpg    1x,
+                    ./images/team/persone-2/mobile/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./images/team/persone-2/tablet/img.jpg    1x,
+                    ./images/team/persone-2/tablet/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/persone-2/desktop/img.jpg    1x,
+                    ./images/team/persone-2/desktop/img@2x.jpg 2x
+                  " />
+                <img
+                  class="team__persone-photo"
+                  src="./images/team/persone-2/mobile/img.jpg"
+                  alt="Ольга Репина" />
+              </picture> -->
+              <img
+                class="team__persone-photo"
+                srcset="
+                  ./images/team/persone-2/mobile/img.jpg     450w,
+                  ./images/team/persone-2/mobile/img@2x.jpg  900w,
+                  ./images/team/persone-2/tablet/img.jpg     354w,
+                  ./images/team/persone-2/tablet/img@2x.jpg  708w,
+                  ./images/team/persone-2/desktop/img.jpg    270w,
+                  ./images/team/persone-2/desktop/img@2x.jpg 540w
+                "
+                src="./images/team/persone-2/mobile/img.jpg"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                alt="" />
               <div class="team__thumb">
                 <h3 class="team__person-name">Ольга Репина</h3>
                 <p class="team__persone-position">Frontend Developer</p>
@@ -318,7 +420,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__persone-photo" src="./images/marketing-persone-photo.jpg" alt="" />
+              <!-- <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/persone-3/mobile/img.jpg    1x,
+                    ./images/team/persone-3/mobile/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./images/team/persone-3/tablet/img.jpg    1x,
+                    ./images/team/persone-3/tablet/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/persone-3/desktop/img.jpg    1x,
+                    ./images/team/persone-3/desktop/img@2x.jpg 2x
+                  " />
+                <img
+                  class="team__persone-photo"
+                  src="./images/team/persone-3/mobile/img.jpg"
+                  alt="Николай Тарасов" />
+              </picture> -->
+              <img
+                class="team__persone-photo"
+                srcset="
+                  ./images/team/persone-3/mobile/img.jpg     450w,
+                  ./images/team/persone-3/mobile/img@2x.jpg  900w,
+                  ./images/team/persone-3/tablet/img.jpg     354w,
+                  ./images/team/persone-3/tablet/img@2x.jpg  708w,
+                  ./images/team/persone-3/desktop/img.jpg    270w,
+                  ./images/team/persone-3/desktop/img@2x.jpg 540w
+                "
+                src="./images/team/persone-3/mobile/img.jpg"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                alt="" />
               <div class="team__thumb">
                 <h3 class="team__person-name">Николай Тарасов</h3>
                 <p class="team__persone-position">Marketing</p>
@@ -373,7 +511,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__persone-photo" src="./images/ui-designer-photo.jpg" alt="" />
+              <!-- <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/persone-4/mobile/img.jpg    1x,
+                    ./images/team/persone-4/mobile/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./images/team/persone-4/tablet/img.jpg    1x,
+                    ./images/team/persone-4/tablet/img@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/persone-4/desktop/img.jpg    1x,
+                    ./images/team/persone-4/desktop/img@2x.jpg 2x
+                  " />
+                <img
+                  class="team__persone-photo"
+                  src="./images/team/persone-4/mobile/img.jpg"
+                  alt="Михаил Ермаков" />
+              </picture> -->
+              <img
+                class="team__persone-photo"
+                srcset="
+                  ./images/team/persone-4/mobile/img.jpg     450w,
+                  ./images/team/persone-4/mobile/img@2x.jpg  900w,
+                  ./images/team/persone-4/tablet/img.jpg     354w,
+                  ./images/team/persone-4/tablet/img@2x.jpg  708w,
+                  ./images/team/persone-4/desktop/img.jpg    270w,
+                  ./images/team/persone-4/desktop/img@2x.jpg 540w
+                "
+                src="./images/team/persone-4/mobile/img.jpg"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                alt="" />
               <div class="team__thumb">
                 <h3 class="team__person-name">Михаил Ермаков</h3>
                 <p class="team__persone-position">UI Designer</p>
@@ -507,7 +681,7 @@
     <footer class="footer">
       <div class="container">
         <div class="flex-wrap flex-wrap--footer">
-          <div class="notification">
+          <div class="footer__notification notification">
             <a href="" class="notification__logo logo link"
               >Web<span class="logo__item logo__item--light">Studio</span></a
             >
@@ -533,7 +707,7 @@
               </ul>
             </address>
           </div>
-          <div class="join-us">
+          <div class="footer__join-us join-us">
             <h2 class="join-us__title">присоединяйтесь</h2>
             <div class="join-us__social-links social-links">
               <ul class="social-links__list list">
@@ -596,7 +770,7 @@
               </ul>
             </div>
           </div>
-          <div class="subscribe">
+          <div class="footer__subscribe subscribe">
             <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
             <form class="subscribe__field">
               <div class="subscribe__thumb">

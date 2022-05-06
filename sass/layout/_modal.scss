@@ -1,0 +1,55 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: calc(100% - 20px);
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  overflow: auto;
+  transition: transform $transitionTiming;
+
+  background-color: #fff;
+
+  .backdrop--hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  @media (max-width: 479px) {
+    width: calc(100vw - 30px);
+  }
+  @media (min-width: 480px) {
+    width: 450px;
+  }
+
+  &__thumb {
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 0;
+
+    border: none;
+
+    cursor: pointer;
+
+    background-color: transparent;
+  }
+  &__close-icon {
+    display: block;
+
+    transition: fill $transitionTiming;
+
+    .modal__close-btn &:hover,
+    .modal__close-btn &:focus {
+      fill: $accentColor;
+    }
+  }
+}

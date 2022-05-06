@@ -1,0 +1,27 @@
+.join-us {
+  @media (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: 1200px) {
+    flex: 1 0 auto;
+  }
+
+  // .join-us__title
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: inherit;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $basicWhite;
+  }
+
+  // .join-us__social-links
+
+  &__social-links {
+  }
+}
