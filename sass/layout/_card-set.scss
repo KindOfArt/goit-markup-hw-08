@@ -30,17 +30,13 @@
       display: flex;
       flex: 0 1 auto;
     }
-
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
   }
 }
 .card {
   // .card__link
 
   &__link {
-    display: block;
+    display: flex;
 
     transition: box-shadow $transitionTiming;
 
@@ -54,6 +50,8 @@
   // .card__thumb
 
   &__thumb {
+    display: flex;
+    flex-direction: column;
   }
 
   // .card__overlay
@@ -103,6 +101,10 @@
   // .card__description
 
   &__description {
+    flex: 1 1 auto;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
     padding: 20px 24px;
     & > *:not(:last-child) {
       margin-bottom: 4px;

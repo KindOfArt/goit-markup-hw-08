@@ -19,8 +19,11 @@
   @media (max-width: 479px) {
     width: calc(100vw - 30px);
   }
-  @media (min-width: 480px) {
-    width: 450px;
+  @media (min-width: 480px) and (max-width: 1199px) {
+    min-width: 450px;
+  }
+  @media (min-width: 1200px) {
+    min-width: 528px;
   }
 
   &__thumb {
@@ -34,9 +37,12 @@
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    width: 30px;
+    height: 30px;
     padding: 0;
 
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 
     cursor: pointer;
 

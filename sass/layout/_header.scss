@@ -21,18 +21,22 @@
     display: none;
     @media (max-width: 767px) {
       position: relative;
-      width: 30px;
-      height: 18px;
+      width: 24px;
+      height: 16px;
       cursor: pointer;
       display: block;
+      padding: 0;
+      border: none;
       z-index: 6;
+
+      background-color: transparent;
 
       & > span,
       &::before,
       &::after {
         position: absolute;
         left: 0;
-        height: 10%;
+        height: 16%;
         width: 100%;
         transition: all $transitionTiming;
         background-color: $basicBlack;
@@ -165,7 +169,7 @@
         &::after {
           content: "";
           position: absolute;
-          bottom: -32px;
+          bottom: -33px;
           left: 0;
           display: block;
           width: 100%;
@@ -176,7 +180,7 @@
 
           background-color: $accentColor;
           @media (min-width: 1200px) {
-            bottom: -24px;
+            bottom: -25px;
           }
         }
       }
@@ -260,6 +264,27 @@
     @media (min-width: 768px) {
       display: block;
       fill: currentColor;
+    }
+
+    &--phone {
+      @media (min-width: 768px) {
+        width: 10px;
+        height: 14px;
+      }
+      @media (min-width: 1200px) {
+        width: 12px;
+        height: 16px;
+      }
+    }
+    &--mail {
+      @media (min-width: 768px) {
+        width: 14px;
+        height: 10px;
+      }
+      @media (min-width: 1200px) {
+        width: 16px;
+        height: 12px;
+      }
     }
   }
   // .header__social-links

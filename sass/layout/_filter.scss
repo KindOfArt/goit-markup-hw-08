@@ -83,6 +83,9 @@
     @include modifierButton(16, 26, $mainTextColor, $secodaryBgColor);
     padding: 6px 22px;
     box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
 
     .filter__input:checked + & {
       @include modifierButton(16, 26, $basicWhite, $accentColor);

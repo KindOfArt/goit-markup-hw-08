@@ -163,6 +163,11 @@
   // .form__checkbox-set
 
   &__checkbox-set {
+    @media (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
+
     margin-bottom: 30px;
 
     text-align: left;
@@ -172,11 +177,15 @@
 
   &__checkbox-text {
     position: relative;
-    display: inline-flex;
     column-gap: 8px;
-
-    font-size: 12px;
-    line-height: math.div(14, 12);
+    @media (max-width: 1199px) {
+      font-size: 12px;
+      line-height: math.div(14, 12);
+    }
+    @media (min-width: 1200px) {
+      font-size: 14px;
+      line-height: math.div(24, 14);
+    }
   }
 
   // .form__checkbox
@@ -188,7 +197,13 @@
 
   &__checkbox-icon {
     position: relative;
-    bottom: 2px;
+    @media (max-width: 1199px) {
+      bottom: 2px;
+    }
+    @media (min-width: 1200px) {
+      bottom: -2px;
+      margin-right: 9px;
+    }
     flex: 1 0 auto;
     border: 2px solid $mainTextColor;
     border-radius: 2px;
@@ -210,6 +225,7 @@
   // .form__checkbox-link
 
   &__checkbox-link {
+    text-underline-position: under;
     color: $accentColor;
   }
 
