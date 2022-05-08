@@ -42,7 +42,7 @@
       &::before,
       &::after {
         width: 24px;
-        height: 7%;
+        height: 2px;
         transition: all $transitionTiming;
         background-color: $mainTextColor;
       }
@@ -61,11 +61,12 @@
         transform: scale(0);
       }
       &.is-open::before {
+        transform-origin: 50%;
         transform: rotate(-45deg) translate(-4px, 5px);
       }
       &.is-open::after {
         transform-origin: 50%;
-        transform: rotate(45deg) translate(-5px, -5px);
+        transform: rotate(45deg) translate(-4px, -4px);
       }
 
       &:hover span,
