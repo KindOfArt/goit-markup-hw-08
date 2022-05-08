@@ -21,51 +21,51 @@
     display: none;
     @media (max-width: 767px) {
       position: relative;
-      width: 24px;
-      height: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
-      display: block;
       padding: 0;
+      margin: 0;
       border: none;
       z-index: 6;
+
+      transform-origin: center;
 
       background-color: transparent;
 
       & > span,
       &::before,
       &::after {
-        position: absolute;
-        left: 0;
-        height: 16%;
-        width: 100%;
+        width: 24px;
+        height: 7%;
         transition: all $transitionTiming;
-        background-color: $basicBlack;
+        background-color: $mainTextColor;
       }
 
       &::before,
       &::after {
         content: "";
+        display: block;
+        background-color: $mainTextColor;
       }
-      &::before {
-        top: 0;
-      }
-      &::after {
-        bottom: 0;
-      }
+
       & > span {
-        top: 50%;
-        transform: scale(1) translateY(-50%);
+        transform: scale(1);
       }
       &.is-open span {
-        transform: scale(0) translateY(-50%);
+        transform: scale(0);
       }
       &.is-open::before {
-        top: 50%;
-        transform: rotate(-45deg) translateY(-50%);
+        transform: rotate(-45deg) translate(-4px, 5px);
       }
       &.is-open::after {
-        bottom: 50%;
-        transform: rotate(45deg) translateY(50%);
+        transform-origin: 50%;
+        transform: rotate(45deg) translate(-5px, -5px);
       }
 
       &:hover span,

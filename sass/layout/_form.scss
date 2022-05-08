@@ -68,6 +68,8 @@
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 
+    color: $secondaryTextColor;
+
     // .form__label--user
 
     &--user {
@@ -177,12 +179,16 @@
 
   &__checkbox-text {
     position: relative;
+    display: inline-flex;
     column-gap: 8px;
+
+    color: $secondaryTextColor;
     @media (max-width: 1199px) {
       font-size: 12px;
       line-height: math.div(14, 12);
     }
     @media (min-width: 1200px) {
+      align-items: center;
       font-size: 14px;
       line-height: math.div(24, 14);
     }
@@ -201,7 +207,7 @@
       bottom: 2px;
     }
     @media (min-width: 1200px) {
-      bottom: -2px;
+      display: block;
       margin-right: 9px;
     }
     flex: 1 0 auto;
